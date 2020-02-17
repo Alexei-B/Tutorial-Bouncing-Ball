@@ -4,7 +4,8 @@ using System;
 
 namespace Physics
 {
-    public class Ball : EllipseGeometry {
+    public class Ball : EllipseGeometry
+    {
         public Color Color { get; set; }
         public Vector Center { get; private set; }
         public double Radius { get; private set; }
@@ -40,25 +41,32 @@ namespace Physics
             ComputeRect();
         }
 
-        public bool ImpactBounding(double frameTimeSeconds, Rect rect) {
+        public bool ImpactBounding(double frameTimeSeconds, Rect rect)
+        {
             bool collided = false;
             Vector movement = Velocity * frameTimeSeconds;
 
-            if (Rect.X + movement.X < rect.X) {
+            if (Rect.X + movement.X < rect.X)
+            {
                 Center = new Vector(rect.X + Radius, Center.Y);
                 Velocity = new Vector(-Velocity.X, Velocity.Y);
                 collided = true;
-            } else if (Rect.X + Rect.Width + movement.X > rect.X + rect.Width) {
+            }
+            else if (Rect.X + Rect.Width + movement.X > rect.X + rect.Width)
+            {
                 Center = new Vector(rect.X + rect.Width - Radius, Center.Y);
                 Velocity = new Vector(-Velocity.X, Velocity.Y);
                 collided = true;
             }
 
-            if (Rect.Y + movement.Y < rect.Y) {
+            if (Rect.Y + movement.Y < rect.Y)
+            {
                 Center = new Vector(Center.X, rect.Y + Radius);
                 Velocity = new Vector(Velocity.X, -Velocity.Y);
                 collided = true;
-            } else if (Rect.Y + Rect.Height + movement.Y > rect.Y + rect.Height) {
+            }
+            else if (Rect.Y + Rect.Height + movement.Y > rect.Y + rect.Height)
+            {
                 Center = new Vector(Center.X, rect.Y + rect.Height - Radius);
                 Velocity = new Vector(Velocity.X, -Velocity.Y);
                 collided = true;

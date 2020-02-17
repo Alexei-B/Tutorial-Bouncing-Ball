@@ -30,7 +30,8 @@ namespace Physics
         {
             base.Render(context);
 
-            foreach (Ball ball in Balls) {
+            foreach (Ball ball in Balls)
+            {
                 context.DrawGeometry(new SolidColorBrush(ball.Color), null, ball);
             }
         }
