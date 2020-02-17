@@ -7,14 +7,14 @@
         x:Class="Physics.MainWindow"
         Title="Physics">
     <Grid>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="1*" />
-		</Grid.ColumnDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
 
-		<Grid.RowDefinitions>
-			<RowDefinition Height="1*" />
-			<RowDefinition Height="40" />
-		</Grid.RowDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
 
         <physics:PhysicsCanvas x:Name="PhysicsCanvas" Grid.Column="0" Grid.Row="0" />
 

@@ -12,8 +12,8 @@ namespace Physics
         private List<Ball> Balls { get; set; } = new List<Ball>();
         public bool NeedsUpdate { get; private set; } = true;
         private TimeSpan? LastUpdated { get; set; } = null;
-        private const double timeFactor = 3;
         private static Vector Gravity = new Vector(0, 9.81);
+        private const double timeFactor = 5;
 
         public void AddBall(Ball ball)
         {
@@ -42,7 +42,7 @@ namespace Physics
 
         public void Update(TimeSpan time)
         {
-            double frameTimeSeconds = 0.1; // (LastUpdated == null ? 0 : (time - LastUpdated)?.TotalSeconds ?? 0) * timeFactor;
+            double frameTimeSeconds = (LastUpdated == null ? 0 : (time - LastUpdated)?.TotalSeconds ?? 0) * timeFactor;
             LastUpdated = time;
 
             for (int i = 0; i < Balls.Count; ++i)
