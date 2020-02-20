@@ -1,17 +1,21 @@
 # Tutorial-Bouncing-Ball
+
 A simple tutorial for making a cross platform C# based application that does very basic 2D physics for circles.
 
 ## Introduction
+
 In this repository you'll find a complete and working application that simulates basic 2D physics for bouncing balls.  
 If you follow this readme, you'll learn how to implement this yourself.
 
 This is intended for beginners, so feel free to skip ahead if you are feeling confident.
 
 ## Getting Started
+
 If you don't have one already, make a github.com account.  
 They're free, so we'll use it as a neat place to store your work on this tutorial.
 
 ### Dependencies
+
 You'll need to download some dependencies first so that you can develop in C#.  
 **If you're using a Raspberry Pi**, these dependencies will already be installed.
 
@@ -27,6 +31,7 @@ You'll need to download some dependencies first so that you can develop in C#.
    Install the templates: `dotnet new --install ./avalonia-dotnet-templates`
 
 ### Starting your Project
+
 The first thing we're going to need to do is to create the C# project that will build the application.  
 Start by opening a shell.
 
@@ -47,7 +52,7 @@ Now, navigate into the new directory we just created with the above command.
 
 > `cd ./Physics`
 
-Finally, we can initialize git.
+Finally, we can initialize git in this directory.
 
 > `git init`
 
@@ -55,6 +60,52 @@ Right, that's it for the command line for a while. We can launch code and open o
 
 > Windows: `code .`  
 > R Pi: `code-oss .`
+
+## Saving your Work
+
+Throughout this tutorial, you can use github as a place to store your own work.  
+When you are at a point that you want to save, start by configuring git so that it knows who you are:
+
+1. Open a shell (or use the one you opened earlier)
+2. Enter the commands:  
+   `git config user.email = "my.email@address"`
+   `git config user.name = "My Name"`
+
+Excellent, now, we need to have a repository in github to push to:
+
+1. Open [github](github.com)
+2. Create a new repository with a sensible name.
+
+You'll be greeted with a screen that has an explanation of how to push your first code.  
+There are two sets of instructions, what we're interested in doing is pushing our existing code up to github.
+
+For example, if I create a test repository github tells me to:
+
+```sh
+git remote add origin https://github.com/Alexei-B/test.git
+git push -u origin master
+```
+
+For now, just copy the `git remote add` bit.
+
+1. Open a shell (or use the one you opened earlier)
+2. Use the `cd` (change directory) command to navigate to your directory (if you aren't there already).  
+   * Windows: `cd "$env:USERPROFILE/Documents/Physics"`
+   * R Pi: `cd ~/Physics`
+3. Add the remote.
+
+Awesome, that's all of the first time setup done.  
+You can push your work up to github easily through VS Code now:
+
+1. Save all your files.
+2. Open the source control panel (Ctrl+Shift+G).
+3. Stage all of your changes (hit the plus button next to the files).
+4. Write a message that summarises the change in the field above ("Added stuff", "Changed whatever").
+5. Click the tick at the top of the panel.
+6. Click the synchronise button in the bottom left.
+
+Any of that confusing?  
+[Instructions with pictures here.](https://code.visualstudio.com/docs/editor/versioncontrol)
 
 ## Building and Debugging
 
