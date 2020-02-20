@@ -886,7 +886,10 @@ Now, we need up update the `Update` method in the `PhysicsCanvas` class so that 
 
 ## That's It for this Tutorial
 
-Cool, you've done a lot!
+Cool, you've done a lot!  
+Give yourself a pat on the back, grab a drink, bask in the glory of being a *computer wizard*.
+
+If anyone else did the javascript project they probably finished before you, but let's be honest, web programming is for noobs anyway. And they didn't implement *real-time physics*.
 
 There's more you could do in this project. If you've gotten this far, you may want to implement collision between the balls. For that, I suggest you read [the tutorial that I used for the collision physics](https://www.gamasutra.com/view/feature/131424/pool_hall_lessons_fast_accurate_.php) which is excellent.
 
